@@ -279,7 +279,7 @@ export default function Payroll() {
 
   const downloadPDF = (id) => {
     const token = JSON.parse(localStorage.getItem('user'))?.token;
-    const url = `http://192.168.1.5:5000/api/payroll/${id}/pdf?token=${token}`;
+    const url = `${api.defaults.baseURL}/payroll/${id}/pdf?token=${token}`;
     window.open(url, '_blank');
   };
 

@@ -129,7 +129,7 @@ export default function EmployeeDetailAdmin() {
       </div>
    );
 
-   const baseUrl = 'http://192.168.1.5:5000';
+   const baseUrl = api.defaults.baseURL.replace(/\/api$/, '');
 
    return (
       <div className="max-w-7xl mx-auto space-y-8 animate-fade-in pb-20">

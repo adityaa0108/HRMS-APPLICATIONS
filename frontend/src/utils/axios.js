@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://192.168.1.5:5000/api',
+  baseURL: 'https://hrms-applications.onrender.com/api',
 });
 
 api.interceptors.request.use((config) => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../utils/axios';
 import { Link } from 'react-router-dom';
 import { Mail, ArrowRight, Loader2, CheckCircle2 } from 'lucide-react';
 
@@ -17,7 +17,7 @@ export default function ForgotPassword() {
     setMessage('');
 
     try {
-      const response = await axios.post('http://192.168.1.5:5000/api/auth/forgot-password', { email });
+      await api.post('/auth/forgot-password', { email });
       setIsSent(true);
       setMessage('If an account matches that email, a password reset link has been sent.');
     } catch (err) {
